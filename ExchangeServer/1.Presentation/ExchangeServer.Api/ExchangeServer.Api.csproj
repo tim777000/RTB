@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\2.Application\ExchangeServer.Application\ExchangeServer.Application.csproj" />
+    <ProjectReference Include="..\..\4.Infra\ExchangeServer.Infra.Core\ExchangeServer.Infra.Core.csproj" />
+    <ProjectReference Include="..\..\4.Infra\ExchangeServer.Infra.Data\ExchangeServer.Infra.Data.csproj" />
+    <ProjectReference Include="..\..\4.Infra\ExchangeServer.Model\ExchangeServer.Model.csproj" />
+  </ItemGroup>
+
+</Project>

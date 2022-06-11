@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\4.Infra\ExchangeServer.Infra.Core\ExchangeServer.Infra.Core.csproj" />
+    <ProjectReference Include="..\..\4.Infra\ExchangeServer.Infra.Data\ExchangeServer.Infra.Data.csproj" />
+    <ProjectReference Include="..\..\4.Infra\ExchangeServer.Model\ExchangeServer.Model.csproj" />
+  </ItemGroup>
+
+</Project>
