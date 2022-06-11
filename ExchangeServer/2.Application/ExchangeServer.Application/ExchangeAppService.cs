@@ -64,6 +64,14 @@ public class ExchangeAppService
         {
             winner.name = maxRep.FirstOrDefault().name;
             winner.price = maxRep.FirstOrDefault().price;
+            var endpoint = bidders.Where(bidder => bidder.name == winner.name).Select(bidder => bidder.endpoint).FirstOrDefault();
+            var notifyModel = new BidderServerNotifyRequestModel()
+            {
+                session_id = request.session_id,
+                request_id = request.request_id,
+                clear_price = winner.price
+            };
+            await _httpClientRepository.SendAsync<BidderServerNotifyResponseModel>(notifyModel.SerializeJson(), endpoint, "notify_win_bid");
         }
 
         return new BidReqResponseModel()
